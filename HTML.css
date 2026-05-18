@@ -1,0 +1,178 @@
+
+/*
+Div format
+---------------------------------------------------------
+*/
+
+/*
+.infraDiv {
+	display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color:black;
+}
+*/
+
+.infraDiv, .protoDiv {
+	display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  gap: 10px;
+}
+
+.HRDiv, .CRDiv, .GPDiv, .questionDiv, .dataDiv, .algoDiv {
+  width:95%;
+}
+
+h3 {
+	text-align: center;
+}
+
+.mainTitle{
+  background-color: #2ecc71;
+}
+
+.fancy {
+  --b: 6px;   /* control the border thickness */
+  --w: 80px;  /* control the width of the line*/
+  --g: 15px;  /* control the gap */
+  --c: #0B486B;
+ 
+  background: 
+    conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+    conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+  border-image: 
+     linear-gradient(
+       #0000      calc(50% - var(--b)/2),
+       var(--c) 0 calc(50% + var(--b)/2),
+       #0000    0) 
+    1/0 var(--w)/calc(var(--w) + var(--g));
+}
+
+.bigDiv{
+	margin: 0px 15px 0px 15px;
+	box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
+	padding: 1px 10px 10px 0;
+	max-width: 100%;
+}
+
+/*
+*/
+.itemList {
+	max-width: 100%;
+}
+
+.itemList li {
+	margin: 0 0 0 0;
+  padding: 0 0 1px 0px;
+  position: relative;
+}
+
+.itemLabel{
+	margin: 0 0 0 0
+	
+}
+
+.formList{
+	display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* 
+Remove list bullets
+---------------------------------------------------------
+*/
+ul{
+list-style-type: none;
+}
+
+/*
+Radio buttons appearance
+---------------------------------------------------------
+*/
+input[type="radio"]{
+  appearance: none;
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  float: right;
+  margin: 0 10px 0 0
+}
+
+input[type="radio"]:before{
+  content: '\2713';
+  opacity: 0;
+  color: white;
+}
+
+input[type="radio"]:checked:before{
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"][id="0"]{
+  background-color: #2ecc71;
+}
+input[type="radio"][id="1"]{
+  background-color: #3498db;
+}
+input[type="radio"][id="2"]{
+  background-color: #f1c40f;
+}
+
+.btn-icon-remove {
+  cursor: pointer;
+  background: none;
+  border-style: none;
+
+}
+
+.btn-icon-remove:before {
+  font: var(--fa-font-solid);
+  content: '\f2ed';
+}
+
+
+
+/* radio button labels*/
+/*.itemLabel{
+	background-color: #2ecc71;
+	display: block; 
+  float: left; 
+  width: 200px; 
+}*/
+/*
+.itemList {
+  margin: 0 -5px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.itemList {
+  padding: 30px;
+  margin: 30px 0;
+  background: #fff;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+/*
+Field to add item + corresponding button
+---------------------------------------------------------
+*/
+/*.formHolder .col {
+  float: left;
+  width: 10%;
+  padding: 0 5px;
+}
+*/
