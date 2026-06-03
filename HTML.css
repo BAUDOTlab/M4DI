@@ -93,6 +93,31 @@ input[type="radio"]{
 }
 
 
+
+.btn-icon-remove{
+  float: inline-end;
+  background: none;
+  border: none;
+  margin: 0px 5px 0 0;
+  display: grid;
+  cursor: pointer;
+}
+
+.fa-solid.fa-trash-can{
+  float: inline-end;
+  background: none;
+  border: none;
+  margin: 0px 5px 0 0;
+  display: grid;
+}
+
+
+
+
+
+
+
+
 input[type="radio"][id="2"]{
   background-color: #f1c40f;
 }
@@ -162,6 +187,48 @@ input[type="radio"]:checked:before{
   opacity: 1;
   transition: all 0.3s ease;
 }
+
+/*
+ICON TRASH
+----------------------------------------
+*/
+
+/*
+.btn-icon-remove{
+  appearance: none;
+  float: right;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 20%;
+  cursor: pointer;
+  margin: 0px 5px 0px 0px;
+  display: grid;
+  place-content: center;
+  content: "\f2ed";
+  border: 0;
+  background: none;
+}
+  */
+
+
+/*
+appearance: none;
+  float: right;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 20%;
+  border: 0.13em solid currentColor;
+  
+  margin: 0px 5px 0px 0px;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+*/
+
+
+
+
+
 
 
 
