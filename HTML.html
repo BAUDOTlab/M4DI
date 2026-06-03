@@ -14,18 +14,20 @@
 <body>
 	
 	<header>
-		<h1 class="title">Multimodal data integration study</h1>
+		<h1>Multimodal data integration study</h1>
 	</header>
 
 	<!---------------------------------------
 	-----	PART 1: GENERAL PROTOCOL
 	---------------------------------------->
 	
-	<h2 class="mainTitle">General protocol</h2>
+	<h2>General protocol</h2>
 	
 	<div class="infraDiv">
 		
-		<!--------- Human ressources -->
+		<!---------------------------------------
+			-----	HUMAN RESSOURCES
+			---------------------------------------->
 		<div class="HRDiv">
 			
 			<h3>Human Ressources</h3>
@@ -38,6 +40,7 @@
 						<li class="permanent">	
 							<!--------- Remove btn
 							<i class="fa-solid fa-trash-can"></i>-->
+
 							<!--------- Radio btn -->
 							<input type="radio" id="NC" name="radioItem">
 							<label for="NC"></label>
@@ -52,6 +55,7 @@
 							<label class="itemLabel">Ethician/Jurist</label>
 						</li>
 						<li class="permanent">
+							<!--------- Radio btn -->
 							<input type="radio" id="NC" name="radioItem1">
 							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem1">
@@ -60,9 +64,12 @@
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem1">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
 							<label class="itemLabel">Biostatistician/Bioinformatician</label>
 						</li>
 						<li class="permanent">
+							<!--------- Radio btn -->
 							<input type="radio" id="NC" name="radioItem2">
 							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem2">
@@ -71,9 +78,12 @@
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem2">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
 							<label class="itemLabel">Clinical/Biological experts</label>
 						</li>
 						<li class="permanent">
+							<!--------- Radio btn -->
 							<input type="radio" id="NC" name="radioItem3">
 							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem3">
@@ -82,9 +92,12 @@
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem3">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
 							<label class="itemLabel">Project manager</label>
 						</li>
 						<li class="permanent">
+							<!--------- Radio btn -->
 							<input type="radio" id="NC" name="radioItem4">
 							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem4">
@@ -93,6 +106,8 @@
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem4">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
 							<label class="itemLabel">Data steward</label>
 						</li>
 					</ul>
@@ -112,54 +127,79 @@
 			</div>				
 			
 		</div>
-		
+
+		<!---------------------------------------
+			-----	COMPUTER RESSOURCES
+			---------------------------------------->		
 		<div class="CRDiv">
 			<h3>Computer Ressources</h3>
 			
 			<div class="bigDiv">
-				
+
+				<!--------- Computer ressources div list -->				
 				<div class="CRitemList">
 					<ul class="CRlist">
 						<li class="permanent">
-							<label class="itemLabel">HPC</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem5">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem5">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem5">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem5">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">HPC</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">GPU/CPU</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem6">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem6">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem6">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem6">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">GPU/CPU</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Cold storage (long term)</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem7">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem7">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem7">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem7">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Cold storage (long term)</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Hot storage (short term)</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem8">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem8">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem8">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem8">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Hot storage (short term)</label>
 						</li>
 					</ul>
 					
 				</div>
 				
+				<!--------- Computer ressources div form -->
 				<div class="formList">
 					<div class="itemName">
 						<input type="text" id="CRaddItem" placeholder="New item ...">
@@ -173,45 +213,65 @@
 			
 		</div>
 		
+		<!---------------------------------------
+			-----	GOOD PRACTICES
+			---------------------------------------->
 		<div class="GPDiv">
 			
 			<h3>Good practices</h3>
 			
 			<div class="bigDiv">
 				
+				<!--------- Good practices div list -->		
 				<div class="GPitemList">
 					<ul class="GPlist">
 						<li class="permanent">
-							<label class="itemLabel">FAIRE principles</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem9">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem9">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem9">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem9">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">FAIRE principles</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Open ...</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem10">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem10">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem10">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem10">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Open ...</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Licences</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem11">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem11">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem11">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem11">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Licences</label>
 						</li>
 					</ul>
 					
 				</div>
 				
+				<!--------- Good practices div form -->
 				<div class="formList">
 					<div class="itemName">
 						<input type="text" id="GPaddItem" placeholder="New item ...">
@@ -232,53 +292,69 @@
 	-----	PART 2: INTEGRATION PROTOCOL
 	---------------------------------------->
 
-	<h2 class="fancy">Integration protocol</h3>
+	<h2>Integration protocol</h3>
 	
 	<div class="protoDiv">
-		
-		<div class="questionDiv">
 
-			<!---------------------------------------
+		<!---------------------------------------
 			-----	QUESTION
 			---------------------------------------->
-			
+		<div class="questionDiv">
+
 			<h3>Biological question</h3>
 			
 			<div class="bigDiv">
 				
+				<!--------- Question div list -->		
 				<div class="questionItemList">
 					<ul class="questionList">
 						<li class="permanent">
-							<label class="itemLabel">Question clearly defined</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem30">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem30">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem30">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem30">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Question clearly defined</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Success criteria specified</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem31">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem31">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem31">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem31">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Success criteria specified</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Interpretability requirement defined</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem32">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem32">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem32">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem32">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Interpretability requirement defined</label>
 						</li>
 					</ul>
 					
 				</div>
 				
+				<!--------- Question div form -->
 				<div class="formList">
 					<div class="itemName">
 						<input type="text" id="questionAddItem" placeholder="New item ...">
@@ -292,67 +368,93 @@
 			
 		</div>
 		
-		<div class="dataDiv">
-
-			<!---------------------------------------
+		<!---------------------------------------
 			-----	DATA
 			---------------------------------------->
+		<div class="dataDiv">
 
 			<h3>Data</h3>
 			
 			<div class="bigDiv">
 				
+				<!--------- Data div list -->		
 				<div class="dataItemList">
 					<ul class="dataList">
 						<li class="permanent">
-							<label class="itemLabel">Data Management Plan</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem40">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem40">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem40">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem40">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Data Management Plan</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Regulatory compliance</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem41">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem41">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem41">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem41">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Regulatory compliance</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Accessibility/Authorizations</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem42">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem42">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem42">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem42">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Accessibility/Authorizations</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Required modalities defined</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem43">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem43">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem43">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem43">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Required modalities defined</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Data quality/explo</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem44">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem44">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem44">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem44">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Data quality/explo</label>
 						</li>
 					</ul>
 					
 				</div>
 				
+				<!--------- Data div form -->
 				<div class="formList">
 					<div class="itemName">
 						<input type="text" id="dataAddItem" placeholder="New item ...">
@@ -366,49 +468,65 @@
 			
 		</div>
 		
-		<div class="algoDiv">
-
-			<!---------------------------------------
+		<!---------------------------------------
 			-----	ALGORITHM
 			---------------------------------------->
+		<div class="algoDiv">
 			
 			<h3>Algorithm</h3>
 			
 			<div class="bigDiv">
 				
+				<!--------- Algorithm div list -->		
 				<div class="algoItemList">
 					<ul class="algoList">
 						<li class="permanent">
-							<label class="itemLabel">Match question type</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem50">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem50">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem50">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem50">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Match question type</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Suited to data characteristics</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem51">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem51">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem51">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem51">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Suited to data characteristics</label>
 						</li>
 						<li class="permanent">
-							<label class="itemLabel">Evaluations</label>
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem52">
+							<label for="NC"></label>
 							<input type="radio" id="0" name="radioItem52">
 							<label for="0"></label>
 							<input type="radio" id="1" name="radioItem52">
 							<label for="1"></label>
 							<input type="radio" id="2" name="radioItem52">
 							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Evaluations</label>
 						</li>
 					</ul>
 					
 				</div>
 				
+				<!--------- Algorithm div form -->
 				<div class="formList">
 					<div class="itemName">
 						<input type="text" id="algoAddItem" placeholder="New item ...">
