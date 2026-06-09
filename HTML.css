@@ -132,6 +132,9 @@ input[type="radio"][id="NC"]{
   margin-left: 15px;
 }
 
+
+
+
 /*
 WHEN BLUE BOX BUTTON IS CHECKED
 ----------------------------------------
@@ -187,6 +190,55 @@ input[type="radio"]:checked:before{
   opacity: 1;
   transition: all 0.3s ease;
 }
+
+
+/*
+CSS FOR PRINTING
+----------------------------------------
+*/
+
+@media print{
+  /* Preserve css style when printing */
+  * {
+      print-color-adjust: exact!important;
+  }
+  
+  /* Remove remove button */
+  .btn-icon-remove{
+    display: none;
+  }
+
+  /* Remove the form to add new item*/
+  .formList{
+    display: none;
+  }
+
+  /* Light color for priting */
+  input[type="radio"][id="2"]{
+    background-color: #ffe26d;
+  }
+  input[type="radio"][id="1"]{
+    background-color: #77c9ff;
+  }
+  input[type="radio"][id="0"]{
+    background-color: #89ffba;
+  }
+  input[type="radio"][id="NC"]{
+    background-color: #bebebe;
+    margin-left: 15px;
+  }
+
+  /* Remove print button*/
+  .btn#print-button{
+    display: none;
+  }
+}
+
+
+
+
+
+
 
 /*
 ICON TRASH

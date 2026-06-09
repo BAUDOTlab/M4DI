@@ -7,6 +7,9 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
 	<link rel="stylesheet" href="HTML.css">
+
+	<!-- html2pdf CDN link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 	
 	<title>Check list</title>
 </head>
@@ -17,6 +20,8 @@
 		<h1>Multimodal data integration study</h1>
 	</header>
 
+	<button id="print-button" class="btn"><i class="fas fa-print"></i> Print page</button>
+	
 	<!---------------------------------------
 	-----	PART 1: GENERAL PROTOCOL
 	---------------------------------------->
@@ -371,7 +376,7 @@
 		<!---------------------------------------
 			-----	DATA
 			---------------------------------------->
-		<div class="dataDiv">
+		<div class="dataDiv" id="dataDiv">
 
 			<h3>Data</h3>
 			
@@ -471,7 +476,7 @@
 		<!---------------------------------------
 			-----	ALGORITHM
 			---------------------------------------->
-		<div class="algoDiv">
+		<div class="algoDiv" id="algoDiv">
 			
 			<h3>Algorithm</h3>
 			
@@ -540,8 +545,17 @@
 			
 		</div>
 		
+		
 	</div>
 
+	
+
+	
+	
+
+	<!---------------------------------------
+	-----	js scripts
+	---------------------------------------->
 	<script src="jquery.min.js"></script>
 	
 </body>
