@@ -25,7 +25,7 @@ DIV FORMAT
   width:95%;
 }
 
-/* List + form new item button shape */
+/* List + form "new item" button shape */
 .bigDiv{
   margin: 0px 15px 0px 15px;
   box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
@@ -33,7 +33,7 @@ DIV FORMAT
   max-width: 100%;
 }
 
-/* Form new item button shape */
+/* Form "new item" button shape */
 .formList{
   display: flex;
   flex-direction: row;
@@ -48,6 +48,57 @@ li{
 }
 
 
+/* 
+LIST FORMAT
+---------------------------------------------------------
+*/
+
+/* Remove list bullets */
+ul{
+  list-style-type: none; 
+}
+
+
+/*
+LEGEND OF RADIO BUTTONS
+----------------------------------------
+*/
+
+/* Square shape */
+.square{
+  height: 1em;
+  width: 1em;
+  border-radius: 20%;
+  border: 0.1em solid currentColor;
+}
+
+/* Square color according their id */
+.square#NC{
+  background-color: #808080;
+}
+.square#done{
+  background-color: #2ecc71;
+}
+.square#inprogress{
+  background-color: #3498db;
+}
+.square#todo{
+  background-color: #f1c40f;
+}
+
+/* Div of the legend */
+.legendDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Put legend list into the right */
+.legendUl{
+  margin-left: auto;
+}
+
+/* Legend list */
 li.legend{
   display: flex;
   flex-direction: row;
@@ -55,48 +106,12 @@ li.legend{
   margin: -30px 0px;
 }
 
-.legendDiv{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.legendUl{
-  margin-left: auto;
-}
-
-
-
 
 /*
-.itemList {
-	max-width: 100%;
-}
-
-.itemList li {
-	margin: 0 0 0 0;
-  padding: 0 0 1px 0px;
-  position: relative;
-
-
+RADIO BUTTONS
+----------------------------------------
 */
 
-
-
-/* 
-LIST FORMAT
----------------------------------------------------------
-*/
-
-ul{
-  list-style-type: none; /* Remove list bullets */
-}
-
-
-/* 
-RADIO BUTTONS FORMAT
----------------------------------------------------------
-*/
 input[type="radio"]{
   appearance: none;
   float: right;
@@ -111,11 +126,68 @@ input[type="radio"]{
   place-content: center;
 }
 
+/* Before check radio button */
+input[type="radio"]:before{
+  content: "\2713";
+  opacity: 0;
+  color: black;
+}
 
+/* When check a radio button */
+input[type="radio"]:checked:before{
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 
+/* Color of radio buttons according their meaning */
+input[type="radio"][id="done"]{
+  background-color: #f1c40f;
+}
+input[type="radio"][id="inprogress"]{
+  background-color: #3498db;
+}
+input[type="radio"][id="todo"]{
+  background-color: #2ecc71;
+}
+input[type="radio"][id="NC"]{
+  background-color: #808080;
+  margin-left: 15px;
+}
 
+/* When "in progress" radio button is checked */
+input[type="radio"][id="inprogress"]:checked~input[type="radio"][id="done"]{
+  opacity: 0.5;
+}
 
+/* When "done" radio button is checked */
+input[type="radio"][id="todo"]:checked~input[type="radio"][id="inprogress"]{
+  opacity: 0.5;
+}
+input[type="radio"][id="todo"]:checked~input[type="radio"][id="done"]{
+  opacity: 0.5;
+}
 
+/* When "not-concerned" radio button is checked */
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="done"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~.itemLabel{
+  opacity: 0.5;
+}
+
+/* 
+REMOVE BUTTONS
+---------------------------------------------------------
+*/
 
 .btn-icon-remove{
   float: inline-end;
@@ -135,135 +207,24 @@ input[type="radio"]{
 }
 
 
-
-
-
-
-
-
-input[type="radio"][id="2"]{
-  background-color: #f1c40f;
-}
-input[type="radio"][id="1"]{
-  background-color: #3498db;
-}
-input[type="radio"][id="0"]{
-  background-color: #2ecc71;
-}
-input[type="radio"][id="NC"]{
-  background-color: #808080;
-  margin-left: 15px;
-}
-
-
-
-
 /*
-WHEN BLUE BOX BUTTON IS CHECKED
-----------------------------------------
-*/
-input[type="radio"][id="1"]:checked~input[type="radio"][id="2"]{
-  opacity: 0.5;
-}
-
-
-/*
-WHEN GREEN BOX BUTTON IS CHECKED
-----------------------------------------
-*/
-input[type="radio"][id="0"]:checked~input[type="radio"][id="1"]{
-  opacity: 0.5;
-}
-input[type="radio"][id="0"]:checked~input[type="radio"][id="2"]{
-  opacity: 0.5;
-}
-
-
-/*
-WHEN NON-CONCERNED BOX IS CHECKED
-----------------------------------------
-*/
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="0"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="1"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="2"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-
-input[type="radio"][id="NC"]:checked~.itemLabel{
-  opacity: 0.5;
-}
-
-
-
-
-input[type="radio"]:before{
-  content: "\2713";
-  opacity: 0;
-  color: black;
-}
-
-input[type="radio"]:checked:before{
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-
-.btn#legend{
-  appearance: none;
-  background: none;
-  border: none;
-  display: inline;
-  float: inline-start;
-
-}
-
-
-
-
-
-.square{
-  height: 1em;
-  width: 1em;
-  border-radius: 20%;
-  border: 0.1em solid currentColor;
-}
-
-
-
-.square#NC{
-  background-color: #808080;
-}
-
-.square#done{
-  background-color: #2ecc71;
-}
-
-.square#inprogress{
-  background-color: #3498db;
-}
-
-.square#todo{
-  background-color: #f1c40f;
-}
-
-
-
-/*
-CSS FOR PRINTING
+PRINTING
 ----------------------------------------
 */
 
 @media print{
-  /* Preserve css style when printing */
+  /* 
+  Preserve css style when printing 
+  and avoid element overlap two pages
+  */
   * {
       print-color-adjust: exact!important;
+      page-break-inside: avoid;
+  }
+
+  /* Landscape printing*/
+  @page{
+    size: landscape;
   }
   
   /* Remove remove button */
@@ -282,13 +243,13 @@ CSS FOR PRINTING
   }
 
   /* Light color for priting */
-  input[type="radio"][id="2"]{
+  input[type="radio"][id="done"]{
     background-color: #ffe26d;
   }
-  input[type="radio"][id="1"]{
+  input[type="radio"][id="inprogress"]{
     background-color: #77c9ff;
   }
-  input[type="radio"][id="0"]{
+  input[type="radio"][id="todo"]{
     background-color: #89ffba;
   }
   input[type="radio"][id="NC"]{
@@ -310,203 +271,3 @@ CSS FOR PRINTING
     background-color: #ffe26d;
   }
 }
-
-
-
-
-
-
-
-/*
-ICON TRASH
-----------------------------------------
-*/
-
-/*
-.btn-icon-remove{
-  appearance: none;
-  float: right;
-  width: 1.3em;
-  height: 1.3em;
-  border-radius: 20%;
-  cursor: pointer;
-  margin: 0px 5px 0px 0px;
-  display: grid;
-  place-content: center;
-  content: "\f2ed";
-  border: 0;
-  background: none;
-}
-  */
-
-
-/*
-appearance: none;
-  float: right;
-  width: 1.3em;
-  height: 1.3em;
-  border-radius: 20%;
-  border: 0.13em solid currentColor;
-  
-  margin: 0px 5px 0px 0px;
-  background-repeat: no-repeat;
-  display: grid;
-  place-content: center;
-*/
-
-
-
-
-
-
-
-
-
-
-/*
-input[type="radio"]:before{
-  content: '\2713';
-  opacity: 0;
-  color: white;
-}
-
-
-.itemList {
-  padding: 30px;
-  margin: 30px 0;
-  background: #fff;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
-}
-*/
-
-
-
-
-/*
-Radio buttons appearance
----------------------------------------------------------
-*/
-/*
-input[type="radio"]{
-  appearance: none;
-  display: inline-block;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  float: right;
-  margin: 0 10px 0 0
-}
-
-input[type="radio"]:before{
-  content: '\2713';
-  opacity: 0;
-  color: white;
-}
-
-input[type="radio"]:checked:before{
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-
-
-.btn-icon-remove {
-  cursor: pointer;
-  background: none;
-  border-style: none;
-}
-
-.btn-icon-remove:before {
-  font: var(--fa-font-solid);
-  content: '\f2ed';
-}
-
-
-
-/* radio button labels*/
-/*.itemLabel{
-	background-color: #2ecc71;
-	display: block; 
-  float: left; 
-  width: 200px; 
-}*/
-/*
-.itemList {
-  margin: 0 -5px;
-  overflow: hidden;
-  position: relative;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*
-Div format
----------------------------------------------------------
-*/
-/*
-
-
-.mainTitle{
-  background-color: #2ecc71;
-}
-*/
-
-/*
-.fancy {
-  --b: 6px;   /* control the border thickness */
-/*  --w: 80px;  /* control the width of the line*/
-/*  --g: 15px;  /* control the gap */
-/*  --c: #0B486B;
- 
-  background: 
-    conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
-    conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
-  background-size: 51% 100%;
-  background-repeat: no-repeat;
-  border-image: 
-     linear-gradient(
-       #0000      calc(50% - var(--b)/2),
-       var(--c) 0 calc(50% + var(--b)/2),
-       #0000    0) 
-    1/0 var(--w)/calc(var(--w) + var(--g));
-}
-
-/*
-*/
-/*
-
-.itemList li {
-	margin: 0 0 0 0;
-  padding: 0 0 1px 0px;
-  position: relative;
-}
-
-.itemLabel{
-	margin: 0 0 0 0
-	
-}
-
-
-
-
-
-/*
-Field to add item + corresponding button
----------------------------------------------------------
-*/
-/*.formHolder .col {
-  float: left;
-  width: 10%;
-  padding: 0 5px;
-}
-*/
