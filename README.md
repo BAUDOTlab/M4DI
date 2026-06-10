@@ -14,10 +14,12 @@ git clone https://github.com/BAUDOTlab/M4DI/
 Open the HTML.html file and add tickboxes if necessay. 
 
 ### TO DO
-- [ ] Save the edited file?
+- [ ] Check the removing event (list are removed if enter on keybord)
+- [x] Save the edited file - Possible but CSS is missing ...
+- [ ] Find a way to not edit CSS path inside the HTML file (save into cookies is bad idea)
 - [ ] Change name files
-- [ ] Make github page to have a printed version?
+- [x] ~Make github page to have a printed version~ - Add a printer button to save into PDF
 - [ ] Check the initial list of each section
 - [ ] Check sections
-
+- [ ] Custom titles
 
