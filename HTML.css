@@ -43,9 +43,28 @@ DIV FORMAT
 }
 
 /* Vertical space between list items */
-li {
+li{
   margin: 5px 0px;
 }
+
+
+li.legend{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: -30px 0px;
+}
+
+.legendDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.legendUl{
+  margin-left: auto;
+}
+
 
 
 
@@ -91,6 +110,10 @@ input[type="radio"]{
   display: grid;
   place-content: center;
 }
+
+
+
+
 
 
 
@@ -192,6 +215,46 @@ input[type="radio"]:checked:before{
 }
 
 
+.btn#legend{
+  appearance: none;
+  background: none;
+  border: none;
+  display: inline;
+  float: inline-start;
+
+}
+
+
+
+
+
+.square{
+  height: 1em;
+  width: 1em;
+  border-radius: 20%;
+  border: 0.1em solid currentColor;
+}
+
+
+
+.square#NC{
+  background-color: #808080;
+}
+
+.square#done{
+  background-color: #2ecc71;
+}
+
+.square#inprogress{
+  background-color: #3498db;
+}
+
+.square#todo{
+  background-color: #f1c40f;
+}
+
+
+
 /*
 CSS FOR PRINTING
 ----------------------------------------
@@ -213,6 +276,11 @@ CSS FOR PRINTING
     display: none;
   }
 
+  /* Remove print button*/
+  .btn#print-button{
+    display: none;
+  }
+
   /* Light color for priting */
   input[type="radio"][id="2"]{
     background-color: #ffe26d;
@@ -228,9 +296,18 @@ CSS FOR PRINTING
     margin-left: 15px;
   }
 
-  /* Remove print button*/
-  .btn#print-button{
-    display: none;
+  /* Legend: Light color for priting */
+  .square#NC{
+    background-color: #bebebe;
+  }
+  .square#done{
+    background-color: #89ffba;
+  }
+  .square#inprogress{
+    background-color: #77c9ff;
+  }
+  .square#todo{
+    background-color: #ffe26d;
   }
 }
 

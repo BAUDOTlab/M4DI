@@ -8,9 +8,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
 	<link rel="stylesheet" href="HTML.css">
 
-	<!-- html2pdf CDN link -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-	
 	<title>Check list</title>
 </head>
 
@@ -20,8 +17,33 @@
 		<h1>Multimodal data integration study</h1>
 	</header>
 
-	<button id="print-button" class="btn"><i class="fas fa-print"></i> Print page</button>
-	
+
+	<div class="legendDiv">
+
+		<button id="print-button" class="btn"><i class="fas fa-print"></i> Print page</button>
+
+		<ul class="legendUl">
+			<li class="legend">
+				<p class="square" id="NC"></p>
+				<p> Not concerned </p>
+			</li>
+			<li class="legend">
+				<p class="square" id="todo"></p>
+				<p> To do </p>
+			</li>
+			<li class="legend">
+				<p class="square" id="inprogress"></p>
+				<p> In progress </p>
+			</li>
+			<li class="legend">
+				<p class="square" id="done"></p>
+				<p> Done </p>
+			</li>
+			</li>
+		</ul>
+
+	</div>
+
 	<!---------------------------------------
 	-----	PART 1: GENERAL PROTOCOL
 	---------------------------------------->
@@ -548,10 +570,6 @@
 		
 	</div>
 
-	
-
-	
-	
 
 	<!---------------------------------------
 	-----	js scripts
