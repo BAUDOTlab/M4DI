@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<img src="Check_list.png" width="604" height="169">
+<img src="Check_list.png">
 
 </p>
 
