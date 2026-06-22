@@ -20,8 +20,12 @@ git clone https://github.com/BAUDOTlab/M4DI/
 ```
 Open the HTML.html file and add tickboxes if necessay. 
 
+To save it into pdf, click on "Print page" button on the top left. 
+You can add new item on each section if you want.
+And then, remove it if it's necessary. The initial items are not deletable but you can check the "not concerned" box in grey. 
+
 ### TO DO
-- [ ] Check the removing event (list are removed if enter on keybord)
+- [x] Check the removing event (list are removed if enter on keybord)
 - [x] Save the edited file - Possible but CSS is missing ...
 - [ ] Find a way to not edit CSS path inside the HTML file (save into cookies is bad idea)
 - [ ] Change name files
