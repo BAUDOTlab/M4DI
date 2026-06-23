@@ -1,13 +1,18 @@
-# M4DI
+# Designing multimodal data integration strategies in biomedical research
+
+Ongoing work!
+
+Practical checklist to help the broader biomedical community (including medical practitioners, biologists, computational biologists and biostatisticians) to design multimodal data integration analysis.
 
 <p align="center">
 
 <img src="Check_list.png">
+<figcaption>Figure S1: Guideline for designing a data integrationprotocol in a biomedical context.</figcaption>
 
 </p>
 
 
-Ongoing work!
+
 
 This repository contains files for one of the figures from the ongoing consortium paper. 
 The idea is to provide a self-assessment questions and guidelines to researcher which want to perform integrative analysis.
