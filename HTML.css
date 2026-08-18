@@ -1,4 +1,23 @@
 /*
+GLOBAL VARIABLES
+----------------------------------------------------
+*/
+:root{
+  /* Box color */
+  --todo: #f1c40f;
+  --inprog: #3498db;
+  --done: #2ecc71;
+  --nc: #808080;
+  /* Box color - print */
+  --todo_p: #ffe26d;
+  --inprog_p: #77c9ff;
+  --done_p: #89ffba;
+  --nc_p: #bebebe;
+
+}
+
+
+/*
 TITLES FORMAT
 ----------------------------------------------------
 */
@@ -74,16 +93,16 @@ LEGEND OF RADIO BUTTONS
 
 /* Square color according their id */
 .square#NC{
-  background-color: #808080;
+  background-color: var(--nc);
 }
 .square#done{
-  background-color: #2ecc71;
+  background-color: var(--done);
 }
 .square#inprogress{
-  background-color: #3498db;
+  background-color: var(--inprog);
 }
 .square#todo{
-  background-color: #f1c40f;
+  background-color: var(--todo);
 }
 
 /* Div of the legend */
@@ -141,16 +160,16 @@ input[type="radio"]:checked:before{
 
 /* Color of radio buttons according their meaning */
 input[type="radio"][id="done"]{
-  background-color: #f1c40f;
+  background-color: var(--todo);
 }
 input[type="radio"][id="inprogress"]{
-  background-color: #3498db;
+  background-color: var(--inprog);
 }
 input[type="radio"][id="todo"]{
-  background-color: #2ecc71;
+  background-color: var(--done);
 }
 input[type="radio"][id="NC"]{
-  background-color: #808080;
+  background-color: var(--nc);
   margin-left: 15px;
 }
 
@@ -169,15 +188,15 @@ input[type="radio"][id="todo"]:checked~input[type="radio"][id="done"]{
 
 /* When "not-concerned" radio button is checked */
 input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo"]{
-  background-color: #808080;
+  background-color: var(--nc);
   opacity: 0.5;
 }
 input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress"]{
-  background-color: #808080;
+  background-color: var(--nc);
   opacity: 0.5;
 }
 input[type="radio"][id="NC"]:checked~input[type="radio"][id="done"]{
-  background-color: #808080;
+  background-color: var(--nc);
   opacity: 0.5;
 }
 input[type="radio"][id="NC"]:checked~.itemLabel{
@@ -244,30 +263,30 @@ PRINTING
 
   /* Light color for priting */
   input[type="radio"][id="done"]{
-    background-color: #ffe26d;
+    background-color: var(--todo_p);
   }
   input[type="radio"][id="inprogress"]{
-    background-color: #77c9ff;
+    background-color: var(--inprog_p);
   }
   input[type="radio"][id="todo"]{
-    background-color: #89ffba;
+    background-color: var(--done_p);
   }
   input[type="radio"][id="NC"]{
-    background-color: #bebebe;
+    background-color: var(--nc_p);
     margin-left: 15px;
   }
 
   /* Legend: Light color for priting */
   .square#NC{
-    background-color: #bebebe;
+    background-color: var(--nc_p);
   }
   .square#done{
-    background-color: #89ffba;
+    background-color: var(--done_p);
   }
   .square#inprogress{
-    background-color: #77c9ff;
+    background-color: var(--inprog_p);
   }
   .square#todo{
-    background-color: #ffe26d;
+    background-color: var(--todo_p);
   }
 }
