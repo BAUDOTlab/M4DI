@@ -173,9 +173,17 @@ input[type="radio"][id="NC"]{
   margin-left: 15px;
 }
 
+/* When "to do" radio button is checked */
+input[type="radio"][id="done"]:checked~.itemLabel{
+  color: var(--todo);
+}
+
 /* When "in progress" radio button is checked */
 input[type="radio"][id="inprogress"]:checked~input[type="radio"][id="done"]{
   opacity: 0.5;
+}
+input[type="radio"][id="inprogress"]:checked~.itemLabel{
+  color: var(--inprog);
 }
 
 /* When "done" radio button is checked */
@@ -184,6 +192,9 @@ input[type="radio"][id="todo"]:checked~input[type="radio"][id="inprogress"]{
 }
 input[type="radio"][id="todo"]:checked~input[type="radio"][id="done"]{
   opacity: 0.5;
+}
+input[type="radio"][id="todo"]:checked~.itemLabel{
+  color: var(--done);
 }
 
 /* When "not-concerned" radio button is checked */
