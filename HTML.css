@@ -3,17 +3,18 @@ GLOBAL VARIABLES
 ----------------------------------------------------
 */
 :root{
+
   /* Box color */
-  --todo: #f1c40f;
-  --inprog: #3498db;
-  --done: #2ecc71;
+  --todo: #ef8a62;
+  --inprog: #f7f7f7;
+  --done: #67a9cf;
   --nc: #808080;
+  
   /* Box color - print */
   --todo_p: #ffe26d;
   --inprog_p: #77c9ff;
   --done_p: #89ffba;
   --nc_p: #bebebe;
-
 }
 
 
