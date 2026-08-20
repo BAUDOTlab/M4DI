@@ -1,4 +1,12 @@
 /*
+TEST
+*/
+
+
+
+
+
+/*
 GLOBAL VARIABLES
 ----------------------------------------------------
 */
@@ -26,6 +34,30 @@ h1, h2, h3{
   text-align: center;
 }
 
+.header{
+  border: 1px solid ;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.17em;
+  padding: 5px 10px;
+  margin-right: -10px;
+  margin-top: -1px;
+}
+
+.header-general{
+  color: #D32F2F;
+  background-color: #FFEBEE;
+  border-color: #EF9A9A;
+}
+
+.header-integration{
+  color: #2fb2d3;
+  background-color: #ebfeff;
+  border-color: #9aefe8;
+}
+
 /* 
 DIV FORMAT 
 ----------------------------------------------------
@@ -40,6 +72,7 @@ DIV FORMAT
   gap: 10px;
 }
 
+
 /* Each individual div of part 1 and part 2 div*/
 .HRDiv, .CRDiv, .GPDiv, .questionDiv, .dataDiv, .algoDiv {
   width:95%;
@@ -47,10 +80,13 @@ DIV FORMAT
 
 /* List + form "new item" button shape */
 .bigDiv{
+  position: relative;
   margin: 0px 15px 0px 15px;
   box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
   padding: 1px 10px 10px 0;
   max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* Form "new item" button shape */
