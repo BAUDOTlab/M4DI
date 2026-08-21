@@ -2,10 +2,6 @@
 TEST
 */
 
-
-
-
-
 /*
 GLOBAL VARIABLES
 ----------------------------------------------------
@@ -23,6 +19,23 @@ GLOBAL VARIABLES
   --inprog_p: #77c9ff;
   --done_p: #89ffba;
   --nc_p: #bebebe;
+
+  /* Header color */
+  --text_col1: #D32F2F;
+  --back_col1: #FFEBEE;
+  --bord_col1: #EF9A9A;
+
+  --text_col2: #2fb2d3;
+  --back_col2: #ebfeff;
+  --bord_col2: #9aefe8;
+
+  --text_col3: #939697;
+  --back_col3: #f0f0f0;
+  --bord_col3: #a3a5a5;
+
+
+
+
 }
 
 
@@ -47,15 +60,15 @@ h1, h2, h3{
 }
 
 .header-general{
-  color: #D32F2F;
-  background-color: #FFEBEE;
-  border-color: #EF9A9A;
+  color: var(--text_col1);
+  background-color: var(--back_col1);
+  border-color: var(--bord_col1);
 }
 
 .header-integration{
-  color: #2fb2d3;
-  background-color: #ebfeff;
-  border-color: #9aefe8;
+  color: var(--text_col2);
+  background-color: var(--back_col2);
+  border-color: var(--bord_col2);
 }
 
 /* 
@@ -101,6 +114,14 @@ DIV FORMAT
 /* Vertical space between list items */
 li{
   margin: 5px 0px;
+}
+
+.itemLabel{
+  display: inline-block;
+  max-width: 70%;
+  width: 70%;
+  overflow: visible;
+  word-break: break-word;
 }
 
 
