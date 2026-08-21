@@ -47,6 +47,14 @@ li{
   margin: 5px 0px;
 }
 
+.itemLabel{
+  display: inline-block;
+  max-width: 70%;
+  width: 70%;
+  overflow: visible;
+  word-break: break-word;
+}
+
 
 /* 
 LIST FORMAT
