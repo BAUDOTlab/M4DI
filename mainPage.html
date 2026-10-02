@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+	<link rel="stylesheet" href="HTML.css">
+
+	<title>Check list</title>
+</head>
+
+<body>
+
+
+<div class="container">
+
+
+  <!---------------------------------------
+	-----	PART 1: PROJECT SETUP
+	---------------------------------------->
+	
+	<h2>PROJECT SETUP</h2>
+
+  <div class="setupDiv">
+
+    <!---------------------------------------
+		-----	HUMAN RESOURCES
+		---------------------------------------->
+    <div class="HRDiv">
+      
+      <h3>Human Ressources</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Human ressources div list -->
+				<div class="HRitemList">
+					<ul class="HRlist">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Project manager</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Clinician/Biologist</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Biostatistician/Bioinformatician/Computational Biologist</label>
+						</li>
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem3">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem3">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem3">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem3">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Data steward</label>
+						</li>
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem4">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem4">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem4">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem4">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Ethicist/Legal expert</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Human ressources div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="HRaddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="HRaddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+    </div>
+
+    <!---------------------------------------
+		-----	COMPUTING RESOURCES
+		---------------------------------------->
+
+    <div class="CRDiv">
+      
+      <h3>Computer Ressources</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Computer ressources div list -->				
+				<div class="CRitemList">
+					<ul class="CRlist">
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem20">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem20">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem20">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem20">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">HPC/GPU access</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem21">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem21">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem21">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem21">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Short-term storage</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem22">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem22">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem22">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem22">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Long-term storage</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem23">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem23">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem23">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem23">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Energy footprint assessed</label>
+						</li>
+
+					</ul>
+					
+				</div>
+				
+				<!--------- Computer ressources div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="CRaddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="CRaddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+      
+    </div>
+
+    <!---------------------------------------
+		-----	GOOD PRACTICES
+		---------------------------------------->
+
+    <div class="GPDiv">
+      
+      <h3>Good practices</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Good practices div list -->		
+				<div class="GPitemList">
+					<ul class="GPlist">
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem30">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem30">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem30">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem30">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">FAIR principles</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem31">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem31">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem31">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem31">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">CARE principles</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem33">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem33">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem33">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem33">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Open code/data policy defined</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem34">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem34">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem34">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem34">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Licences</label>
+						</li>
+
+					</ul>
+					
+				</div>
+				
+				<!--------- Good practices div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="GPaddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="GPaddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+      
+    </div>
+
+
+  </div>
+
+
+  <!---------------------------------------
+	-----	PART 2: INTEGRATION PROTOCOL
+	---------------------------------------->
+
+  <h2>INTEGRATION PROTOCOL</h2>
+
+  <div class="integrationDiv">
+
+    <!---------------------------------------
+    -----	RESEARCH QUESTION
+    ---------------------------------------->
+
+    <div class="questionDiv">
+
+      <h2>RESEARCH QUESTION</h2>
+
+      <!---------------------------------------
+      -----	FORMULATION
+      ---------------------------------------->
+
+      <div class="formulationDiv">
+
+        <h3>Formulation</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Formulation div list -->
+				<div class="formulationItemList">
+					<ul class="formulationList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Precise biological/clinical question</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Outcomes and measures specified</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Success criteria defined</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Formulation div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="formulationAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="formulationAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+      <!---------------------------------------
+      -----	SCOPE
+      ---------------------------------------->
+
+      <div class="scopeDive">
+
+        <h3>Scope</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Scope div list -->
+				<div class="scopeItemList">
+					<ul class="scopeList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Population/system defined</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Rationale for multimodality</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Exploratory of inferential objectives</label>
+						</li>
+
+            						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">INterpretability requirement</label>
+						</li>
+
+            						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Sample size/Power/Biological replicats</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Scope div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="scopeAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="scopeAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+    </div>
+
+
+    <!---------------------------------------
+    -----	DATA PREPARATION
+    ---------------------------------------->
+    
+    <div class="dataDiv">
+
+      <h2>DATA PREPARATION</h2>
+
+
+
+      <!---------------------------------------
+      -----	GOVERNANCE
+      ---------------------------------------->
+
+      <div class="governanceDiv">
+
+        <h3>Governance</h3>
+
+			<div class="bigDiv">
+
+        <!--------- Governance div list -->
+				<div class="governanceItemList">
+					<ul class="governanceList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Regulatory compliande and re-identification risk</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Acces, authorisations and consent</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Metadata documented</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Data Management Plan</label>
+						</li>
+
+					</ul>
+					
+				</div>
+				
+				<!--------- Governance div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="governanceAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="governanceAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+      <!---------------------------------------
+      -----	PER MODALITY PREPARATION
+      ---------------------------------------->
+
+      <div class="modalityDiv">
+
+        <h3>Per-modality preparation</h3>
+
+			<div class="bigDiv">
+
+        <!--------- Governance div list -->
+				<div class="modalityItemList">
+					<ul class="modalityList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Modalities to collect and/or reuse defined</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">QC and preprocessing documented</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Confounders charaterised (batch, biais ...)</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Exploratory analysis</label>
+						</li>
+
+					</ul>
+					
+				</div>
+				
+				<!--------- Per-modality preparation div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="modalityAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="modalityAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+      <!---------------------------------------
+      -----	CROSS MODAL CONNECTIONS
+      ---------------------------------------->
+
+      <div class="connectionsDiv">
+
+        <h3>Cross-modal connections</h3>
+
+			<div class="bigDiv">
+
+        <!--------- Cross-modal connections div list -->
+				<div class="connectionsItemList">
+					<ul class="connectionsList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Connection type (vertical/horizontal ...)</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Missing modality pattern</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Redundancy/complementarity</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Data harmonisation</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">QC and preprocessing documented</label>
+						</li>
+
+					</ul>
+					
+				</div>
+				
+				<!--------- Cross-modal connections div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="connectionsAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="connectionsAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+    </div>
+
+    <!---------------------------------------
+    -----	ALGORITHM SELECTION
+    ---------------------------------------->
+
+    <div class="algoDiv">
+
+      <h2>ALGORITHM SELECTION</h2>
+
+      <!---------------------------------------
+      -----	TASK FORMULATION
+      ---------------------------------------->
+
+      <div class="taskDiv">
+
+        <h3>Task formulation</h3>
+
+			<div class="bigDiv">
+
+        <!--------- Task formulation div list -->
+				<div class="taskItemList">
+					<ul class="taskList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Task type defined</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Learning strategy chosen</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Algorithm assumptions cheched against data</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Task formulation div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="taskAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="taskAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+      <!---------------------------------------
+      -----	MULTIMODAL INTEGRATION
+      ---------------------------------------->
+
+      <div class="multimodalIntegrationDiv">
+
+        <h3>Multimodal integration</h3>
+
+			<div class="bigDiv">
+
+        <!--------- Multimodal integration div list -->
+				<div class="multimodalIntegrationList">
+					<ul class="multimodalIntegrationList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Integration timing (early/intermediate/late)</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Intermediate fusion approach (if applicable)</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Prior resources incorporated</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Multimodal integration div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="multimodalIntegrationAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="multimodalIntegrationAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+      <!---------------------------------------
+      -----	PRACTICAL CONSTRAINTS
+      ---------------------------------------->
+
+      <div class="constraintsDiv">
+
+        <h3>Practical constraints</h3>
+
+			<div class="bigDiv">
+
+        <!--------- Practical constraints div list -->
+				<div class="constraintsnList">
+					<ul class="constraintsList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Interpretability approach defined</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Computational feasibility</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Software availability and mainteded</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Practical constraints div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="constraintsAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="constraintsAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+      </div>
+
+    </div>
+    
+  </div>
+
+
+  <!---------------------------------------
+	-----	PART 3: EVALUATION
+	---------------------------------------->
+	
+	<h2>EVALUATION</h2>
+
+  <div class="evalDiv">
+
+    <!---------------------------------------
+    -----	VALIDATION
+    ---------------------------------------->
+    <div class="valDiv">
+      
+      <h3>Validation</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Validation div list -->
+				<div class="valItemList">
+					<ul class="valList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Internal validation strategy</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">External validation and representativeness</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Data leakage risks controled</label>
+						</li>
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem3">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem3">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem3">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem3">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Consent and ethical approval</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Validation div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="valAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="valAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+
+    </div>
+
+    <!---------------------------------------
+    -----	METRICS
+    ---------------------------------------->
+
+    <div class="metricsDiv">
+      
+      <h3>Metrics</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Metrics div list -->
+				<div class="metricsItemList">
+					<ul class="metricsList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Metrics suited to task</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Unimodal baseline established</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Clinical utility considered</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Metrics div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="metricsAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="metricsAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+      
+    </div>
+
+    <!---------------------------------------
+    -----	MULTIMODAL EVALUATION
+    ---------------------------------------->
+
+    <div class="multiEvalDiv">
+      
+      <h3>Multimodal evaluation</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Multimodal evaluation div list -->
+				<div class="multiEvalItemList">
+					<ul class="multiEvalList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Modality ablation and dropout</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Cross-modal validation</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Modality importance</label>
+						</li>
+
+            						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Interpretability</label>
+						</li>
+
+            						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Evaluation</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Multimodal evaluation div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="multiEvalAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="multiEvalAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+      
+    </div>
+
+    <!---------------------------------------
+    -----	Reproductibility
+    ---------------------------------------->
+
+    <div class="reprodDiv">
+      
+      <h3>Reproductibility</h3>
+
+      <div class="bigDiv">
+
+        <!--------- Reproductibility div list -->
+				<div class="reprodItemList">
+					<ul class="reprodList">
+
+						<li class="permanent">	
+							<!--------- Remove btn
+							<i class="fa-solid fa-trash-can"></i>-->
+
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem">
+							<label for="2"></label>
+							
+							<!--------- Btn label -->
+							<label class="itemLabel">Version control (data, script ...)</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem1">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem1">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem1">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem1">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Workflow manager</label>
+						</li>
+
+						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Documentation</label>
+						</li>
+
+            						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Benchmark/data challenge</label>
+						</li>
+
+            						<li class="permanent">
+							<!--------- Radio btn -->
+							<input type="radio" id="NC" name="radioItem2">
+							<label for="NC"></label>
+							<input type="radio" id="todo" name="radioItem2">
+							<label for="0"></label>
+							<input type="radio" id="inprogress" name="radioItem2">
+							<label for="1"></label>
+							<input type="radio" id="done" name="radioItem2">
+							<label for="2"></label>
+
+							<!--------- Btn label -->
+							<label class="itemLabel">Pre-registration</label>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!--------- Reproductibility div form -->
+				<div class="formList">
+					<div class="itemName">
+						<input type="text" id="reprodlAddItem" placeholder="New item ...">
+					</div>
+					<div class="itemBtn">
+						<button type="button" id="reprodAddBtn" class="btn-primary">+</button>
+					</div>
+				</div>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+/* TEST */
+
 /*
 TITLES FORMAT
 ----------------------------------------------------
@@ -11,19 +13,53 @@ DIV FORMAT
 ----------------------------------------------------
 */
 
-/* Part 1 + Part 2 */
-.infraDiv, .protoDiv {
+.container{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: top;
-  gap: 10px;
+  flex-direction: column;
+  /*background-color: #bebebe;*/
+  row-gap: 30px;
 }
 
-/* Each individual div of part 1 and part 2 div*/
-.HRDiv, .CRDiv, .GPDiv, .questionDiv, .dataDiv, .algoDiv {
-  width:95%;
+
+/* Part 1 + Part 2 + Part 3*/
+.setupDiv, .integrationDiv, .evalDiv{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  /*
+  align-items: top;
+  gap: 30px;
+  margin-bottom: 20px;
+  width: 98%;*/
+  /*background-color: chocolate;*/
+  
 }
+
+/* Each individual div of part 1 */
+.HRDiv, .CRDiv, .GPDiv {
+  width: 100%;
+  margin-bottom: 20px;
+  /*background-color: fuchsia;*/
+}
+
+/* Each individual div of part 2 */
+.questionDiv, .dataDiv, .algoDiv {
+  /*width: 100%;*/
+  margin-bottom: 20px;
+  /*background-color: olive;*/
+}
+
+/* Each individual div of part 3 */
+.valDiv, .metricsDiv, .multiEvalDiv, .reprodDiv {
+  width: 100%;
+  margin-bottom: 20px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;*/
+}
+
+
+
 
 /* List + form "new item" button shape */
 .bigDiv{
