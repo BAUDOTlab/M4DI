@@ -161,6 +161,7 @@ DIV FORMAT
   max-width: 100%;
   border-top: solid;
   border-radius: 10px;
+  font-size: 0.8em;
 }
 
 .bigDiv-1{
@@ -273,8 +274,8 @@ RADIO BUTTONS
 input[type="radio"]{
   appearance: none;
   float: right;
-  width: 1.3em;
-  height: 1.3em;
+  width: 1em; /*1.3em*/
+  height: 1em;
   border-radius: 20%;
   border: 0.13em solid currentColor;
   cursor: pointer;
