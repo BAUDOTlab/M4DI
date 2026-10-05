@@ -1,12 +1,106 @@
 /* TEST */
 
 /*
+GLOBAL VARIABLES
+----------------------------------------------------
+*/
+:root{
+
+  /* Box color */
+  --todo: #ef8a62;
+  --inprog: #f7f7f7;
+  --done: #67a9cf;
+  --nc: #808080;
+
+  /* Data preparation */
+  --todo_data: #f2f0f7;
+  --inprog_data: #cbc9e2;
+  --done_data: #9e9ac8;
+
+  /* Algorithm */
+  --todo_algo: #fef0d9;
+  --inprog_algo: #fdcc8a;
+  --done_algo: #fc8d59;
+
+  
+  /* Box color - print */
+  --todo_p: #ffe26d;
+  --inprog_p: #77c9ff;
+  --done_p: #89ffba;
+  --nc_p: #bebebe;
+
+  /* Header color */
+  --text_col1: #D32F2F;
+  --back_col1: #FFEBEE;
+  --bord_col1: #EF9A9A;
+
+  --text_col2: #2fb2d3;
+  --back_col2: #ebfeff;
+  --bord_col2: #9aefe8;
+
+  --text_col3: #939697;
+  --back_col3: #f0f0f0;
+  --bord_col3: #a3a5a5;
+}
+
+/*
 TITLES FORMAT
 ----------------------------------------------------
 */
 h1, h2, h3{
   text-align: center;
+
 }
+
+.head{
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.head-eval{
+  color: fuchsia;
+  margin-left: 15px;
+  margin-bottom: -20px;
+}
+
+.head-data{
+  text-align: center;
+  color: #6a51a3;
+}
+
+.head-algo{
+  text-align: center;
+  color: #d7301f;
+  margin-bottom: 20px;
+}
+
+.header{
+  border: 1px solid ;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.17em;
+  padding: 5px 10px;
+  margin-right: -10px;
+  margin-top: -1px;
+}
+
+.header-general{
+  color: var(--text_col1);
+  background-color: var(--back_col1);
+  border-color: var(--bord_col1);
+}
+
+.header-algo{
+  color: var(--text_col1);
+  background-color: var(--back_col1);
+  border-color: var(--bord_col1);
+}
+
+
+
+
 
 /* 
 DIV FORMAT 
@@ -44,7 +138,7 @@ DIV FORMAT
 
 /* Each individual div of part 2 */
 .questionDiv, .dataDiv, .algoDiv {
-  /*width: 100%;*/
+  width: 100%;
   margin-bottom: 20px;
   /*background-color: olive;*/
 }
@@ -59,15 +153,32 @@ DIV FORMAT
 }
 
 
-
-
 /* List + form "new item" button shape */
 .bigDiv{
   margin: 0px 15px 0px 15px;
   box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
   padding: 1px 10px 10px 0;
   max-width: 100%;
+  border-top: solid;
+  border-radius: 10px;
 }
+
+.bigDiv-1{
+  margin: 0px 15px 0px 15px;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  padding: 1px 10px 10px 0;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.div-evaluation{
+  border-color: fuchsia;
+}
+
+.div-data{
+  border-color: #88419d;
+}
+
 
 /* Form "new item" button shape */
 .formList{
@@ -115,6 +226,9 @@ LEGEND OF RADIO BUTTONS
   border-radius: 20%;
   border: 0.1em solid currentColor;
 }
+
+
+
 
 /* Square color according their id */
 .square#NC{
@@ -227,6 +341,91 @@ input[type="radio"][id="NC"]:checked~input[type="radio"][id="done"]{
 input[type="radio"][id="NC"]:checked~.itemLabel{
   opacity: 0.5;
 }
+
+
+
+
+/* Color of radio buttons according their meaning */
+input[type="radio"][id="done_data"]{
+  background-color: var(--todo_data);
+}
+input[type="radio"][id="inprogress_data"]{
+  background-color: var(--inprog_data);
+}
+input[type="radio"][id="todo_data"]{
+  background-color: var(--done_data);
+}
+/* When "in progress" radio button is checked */
+input[type="radio"][id="inprogress_data"]:checked~input[type="radio"][id="done_data"]{
+  opacity: 0.5;
+}
+/* When "done" radio button is checked */
+input[type="radio"][id="todo_data"]:checked~input[type="radio"][id="inprogress_data"]{
+  opacity: 0.5;
+}
+input[type="radio"][id="todo_data"]:checked~input[type="radio"][id="done_data"]{
+  opacity: 0.5;
+}
+/* When "not-concerned" radio button is checked */
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo_data"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress_data"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="done_data"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~.itemLabel{
+  opacity: 0.5;
+}
+
+
+
+/* Color of radio buttons according their meaning */
+input[type="radio"][id="done_algo"]{
+  background-color: var(--todo_algo);
+}
+input[type="radio"][id="inprogress_algo"]{
+  background-color: var(--inprog_algo);
+}
+input[type="radio"][id="todo_algo"]{
+  background-color: var(--done_algo);
+}
+/* When "in progress" radio button is checked */
+input[type="radio"][id="inprogress_algo"]:checked~input[type="radio"][id="done_algo"]{
+  opacity: 0.5;
+}
+/* When "done" radio button is checked */
+input[type="radio"][id="todo_algo"]:checked~input[type="radio"][id="inprogress_algo"]{
+  opacity: 0.5;
+}
+input[type="radio"][id="todo_algo"]:checked~input[type="radio"][id="done_algo"]{
+  opacity: 0.5;
+}
+/* When "not-concerned" radio button is checked */
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo_algo"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress_algo"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~input[type="radio"][id="done_algo"]{
+  background-color: #808080;
+  opacity: 0.5;
+}
+input[type="radio"][id="NC"]:checked~.itemLabel{
+  opacity: 0.5;
+}
+
+
+
+
 
 /* 
 REMOVE BUTTONS
