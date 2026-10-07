@@ -28,6 +28,59 @@
   margin: 0px 15px 0px 15px;
 }
 
+.divTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  border-radius: 10px;
+  margin: 0px 15px 0px 15px;
+  color: white;
+
+}
+
+.divTitle-other{
+  border: solid #bebebe;
+  background-color: #bebebe;
+  margin-top: 15px;
+}
+
+.divTitle-question{
+  border: solid #66c2a5;
+  background-color: #66c2a5;
+}
+
+.divTitle-data{
+  border: solid #fc8d62;
+  background-color: #fc8d62;
+}
+
+.divTitle-algo{
+  border: solid #8da0cb;
+  background-color: #8da0cb;
+}
+
+/* List + form "new item" button shape */
+.bigDiv{
+  margin: 0px 15px 0px 15px;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  padding: 1px 10px 10px 0;
+  max-width: 100%;
+  border-top: solid;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.bigDiv-question{
+  border-top: solid #66c2a5;
+}
+
+.bigDiv-data{
+  border-top: solid #fc8d62;
+}
+
+.bigDiv-algo{
+  border-top: solid #8da0cb;
+}
 
 
 
@@ -198,16 +251,7 @@ DIV FORMAT
 }
 
 
-/* List + form "new item" button shape */
-.bigDiv{
-  margin: 0px 15px 0px 15px;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
-  padding: 1px 10px 10px 0;
-  max-width: 100%;
-  border-top: solid;
-  border-radius: 10px;
-  font-size: 0.8em;
-}
+
 
 .bigDiv-1{
   margin: 0px 15px 0px 15px;
