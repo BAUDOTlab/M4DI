@@ -1,9 +1,79 @@
 /* TEST */
 
+
+/*
+GLOBAL VARIABLES
+----------------------------------------------------
+*/
+:root{
+
+  /* Box color */
+  --todo: #f1c40f;
+  --inprog: #3498db;
+  --done: #2ecc71;
+  --nc: #808080;
+
+    
+  /* Box color - print */
+  --todo_p: #ffe26d;
+  --inprog_p: #77c9ff;
+  --done_p: #89ffba;
+  --nc_p: #bebebe;
+
+  /* Section color */
+  --question: #66c2a5;
+  --data: #fc8d62;
+  --algo: #8da0cb;
+  --other: #bebebe;
+
+}
+
+/*
+TITLES FORMAT
+----------------------------------------------------
+*/
+h1, h2, h3{
+  text-align: center;
+
+}
+
+.divTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  border-radius: 10px;
+  margin: 0px 15px 0px 15px;
+  color: white;
+}
+
+.divTitle-question{
+  border: solid var(--question);
+  background-color: var(--question);
+}
+
+.divTitle-data{
+  border: solid var(--data);
+  background-color: var(--data);
+}
+
+.divTitle-algo{
+  border: solid var(--algo);
+  background-color: var(--algo);
+}
+
+.divTitle-other{
+  border: solid var(--other);
+  background-color: var(--other);
+  margin-top: 15px;
+}
+
+/* 
+DIV FORMAT 
+----------------------------------------------------
+*/
 .container{
   display: flex;
   flex-direction: column;
-  /*background-color: #bebebe;*/
   row-gap: 30px;
 }
 
@@ -22,43 +92,22 @@
   justify-content:space-evenly;
 }
 
-.div{
-  border-top: solid #939697;
-  border-radius: 10px;
-  margin: 0px 15px 0px 15px;
+/* Each individual div of part 1 */
+.HRDiv, .CRDiv, .GPDiv {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.divTitle{
-  text-align: center;
-  font-weight: bold;
-  font-size: x-large;
-  border-radius: 10px;
-  margin: 0px 15px 0px 15px;
-  color: white;
-
+/* Each individual div of part 2 */
+.questionDiv, .dataDiv, .algoDiv {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-
-
-.divTitle-question{
-  border: solid #66c2a5;
-  background-color: #66c2a5;
-}
-
-.divTitle-data{
-  border: solid #fc8d62;
-  background-color: #fc8d62;
-}
-
-.divTitle-algo{
-  border: solid #8da0cb;
-  background-color: #8da0cb;
-}
-
-.divTitle-other{
-  border: solid #bebebe;
-  background-color: #bebebe;
-  margin-top: 15px;
+/* Each individual div of part 3 */
+.valDiv, .metricsDiv, .multiEvalDiv, .reprodDiv {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 /* List + form "new item" button shape */
@@ -73,210 +122,20 @@
 }
 
 .bigDiv-question{
-  border-top: solid #66c2a5;
+  border-top: solid var(--question);
 }
 
 .bigDiv-data{
-  border-top: solid #fc8d62;
+  border-top: solid var(--data);
 }
 
 .bigDiv-algo{
-  border-top: solid #8da0cb;
+  border-top: solid var(--algo);
 }
 
 .bigDiv-other{
-  border-top: solid #bebebe;
+  border-top: solid var(--other);
 }
-
-
-
-
-
-/*
-  margin: 0px 15px 0px 15px;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
-  padding: 1px 10px 10px 0;
-  max-width: 100%;
-  border-top: solid;
-  border-radius: 10px;
-  font-size: 0.8em;
-}
-
-.bigDiv-1{
-  margin: 0px 15px 0px 15px;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
-  padding: 1px 10px 10px 0;
-  max-width: 100%;
-  border-radius: 10px;
-*/
-
-
-/*
-GLOBAL VARIABLES
-----------------------------------------------------
-*/
-:root{
-
-  /* Box color */
-  --todo: #ef8a62;
-  --inprog: #f7f7f7;
-  --done: #67a9cf;
-  --nc: #808080;
-
-  /* Data preparation */
-  --todo_data: #f2f0f7;
-  --inprog_data: #cbc9e2;
-  --done_data: #9e9ac8;
-
-  /* Algorithm */
-  --todo_algo: #fef0d9;
-  --inprog_algo: #fdcc8a;
-  --done_algo: #fc8d59;
-
-  
-  /* Box color - print */
-  --todo_p: #ffe26d;
-  --inprog_p: #77c9ff;
-  --done_p: #89ffba;
-  --nc_p: #bebebe;
-
-  /* Header color */
-  --text_col1: #D32F2F;
-  --back_col1: #FFEBEE;
-  --bord_col1: #EF9A9A;
-
-  --text_col2: #2fb2d3;
-  --back_col2: #ebfeff;
-  --bord_col2: #9aefe8;
-
-  --text_col3: #939697;
-  --back_col3: #f0f0f0;
-  --bord_col3: #a3a5a5;
-}
-
-/*
-TITLES FORMAT
-----------------------------------------------------
-*/
-h1, h2, h3{
-  text-align: center;
-
-}
-
-.head{
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.head-eval{
-  color: fuchsia;
-  margin-left: 15px;
-  margin-bottom: -20px;
-}
-
-.head-data{
-  text-align: center;
-  color: #6a51a3;
-}
-
-.head-algo{
-  text-align: center;
-  color: #d7301f;
-  margin-bottom: 20px;
-}
-
-.header{
-  border: 1px solid ;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.17em;
-  padding: 5px 10px;
-  margin-right: -10px;
-  margin-top: -1px;
-}
-
-.header-general{
-  color: var(--text_col1);
-  background-color: var(--back_col1);
-  border-color: var(--bord_col1);
-}
-
-.header-algo{
-  color: var(--text_col1);
-  background-color: var(--back_col1);
-  border-color: var(--bord_col1);
-}
-
-
-
-
-
-/* 
-DIV FORMAT 
-----------------------------------------------------
-*/
-
-
-
-
-/* Part 1 + Part 2 + Part 3*/
-.setupDiv, .integrationDiv, .evalDiv{
-  display:flex;
-  flex-direction: row;
-  justify-content:space-evenly;
-  /*
-  align-items: top;
-  gap: 30px;
-  margin-bottom: 20px;
-  width: 98%;*/
-  /*background-color: chocolate;*/
-  
-}
-
-/* Each individual div of part 1 */
-.HRDiv, .CRDiv, .GPDiv {
-  width: 100%;
-  margin-bottom: 20px;
-  /*background-color: fuchsia;*/
-}
-
-/* Each individual div of part 2 */
-.questionDiv, .dataDiv, .algoDiv {
-  width: 100%;
-  margin-bottom: 20px;
-  /*background-color: olive;*/
-}
-
-/* Each individual div of part 3 */
-.valDiv, .metricsDiv, .multiEvalDiv, .reprodDiv {
-  width: 100%;
-  margin-bottom: 20px;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;*/
-}
-
-
-
-
-.bigDiv-1{
-  margin: 0px 15px 0px 15px;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
-  padding: 1px 10px 10px 0;
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.div-evaluation{
-  border-color: fuchsia;
-}
-
-.div-data{
-  border-color: #88419d;
-}
-
 
 /* Form "new item" button shape */
 .formList{
@@ -285,6 +144,16 @@ DIV FORMAT
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+/* 
+LIST FORMAT
+---------------------------------------------------------
+*/
+
+/* Remove list bullets */
+ul{
+  list-style-type: none; 
 }
 
 /* Vertical space between list items */
@@ -301,17 +170,6 @@ li{
 }
 
 
-/* 
-LIST FORMAT
----------------------------------------------------------
-*/
-
-/* Remove list bullets */
-ul{
-  list-style-type: none; 
-}
-
-
 /*
 LEGEND OF RADIO BUTTONS
 ----------------------------------------
@@ -325,21 +183,18 @@ LEGEND OF RADIO BUTTONS
   border: 0.1em solid currentColor;
 }
 
-
-
-
 /* Square color according their id */
 .square#NC{
-  background-color: #808080;
+  background-color: var(--nc);
 }
 .square#done{
-  background-color: #2ecc71;
+  background-color: var(--todo);
 }
 .square#inprogress{
-  background-color: #3498db;
+  background-color: var(--inprog);
 }
 .square#todo{
-  background-color: #f1c40f;
+  background-color: var(--done);
 }
 
 /* Div of the legend */
