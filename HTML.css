@@ -82,7 +82,7 @@ DIV FORMAT
   border-radius: 10px;
   margin: 0px 15px 0px 15px;
   padding: 1px 10px 10px 0;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);*/
 }
 
 .secondDiv{
@@ -295,91 +295,6 @@ input[type="radio"][id="NC"]:checked~.itemLabel{
   opacity: 0.5;
 }
 
-
-
-
-/* Color of radio buttons according their meaning */
-input[type="radio"][id="done_data"]{
-  background-color: var(--todo_data);
-}
-input[type="radio"][id="inprogress_data"]{
-  background-color: var(--inprog_data);
-}
-input[type="radio"][id="todo_data"]{
-  background-color: var(--done_data);
-}
-/* When "in progress" radio button is checked */
-input[type="radio"][id="inprogress_data"]:checked~input[type="radio"][id="done_data"]{
-  opacity: 0.5;
-}
-/* When "done" radio button is checked */
-input[type="radio"][id="todo_data"]:checked~input[type="radio"][id="inprogress_data"]{
-  opacity: 0.5;
-}
-input[type="radio"][id="todo_data"]:checked~input[type="radio"][id="done_data"]{
-  opacity: 0.5;
-}
-/* When "not-concerned" radio button is checked */
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo_data"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress_data"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="done_data"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~.itemLabel{
-  opacity: 0.5;
-}
-
-
-
-/* Color of radio buttons according their meaning */
-input[type="radio"][id="done_algo"]{
-  background-color: var(--todo_algo);
-}
-input[type="radio"][id="inprogress_algo"]{
-  background-color: var(--inprog_algo);
-}
-input[type="radio"][id="todo_algo"]{
-  background-color: var(--done_algo);
-}
-/* When "in progress" radio button is checked */
-input[type="radio"][id="inprogress_algo"]:checked~input[type="radio"][id="done_algo"]{
-  opacity: 0.5;
-}
-/* When "done" radio button is checked */
-input[type="radio"][id="todo_algo"]:checked~input[type="radio"][id="inprogress_algo"]{
-  opacity: 0.5;
-}
-input[type="radio"][id="todo_algo"]:checked~input[type="radio"][id="done_algo"]{
-  opacity: 0.5;
-}
-/* When "not-concerned" radio button is checked */
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo_algo"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress_algo"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~input[type="radio"][id="done_algo"]{
-  background-color: #808080;
-  opacity: 0.5;
-}
-input[type="radio"][id="NC"]:checked~.itemLabel{
-  opacity: 0.5;
-}
-
-
-
-
-
 /* 
 REMOVE BUTTONS
 ---------------------------------------------------------
@@ -440,30 +355,30 @@ PRINTING
 
   /* Light color for priting */
   input[type="radio"][id="done"]{
-    background-color: #ffe26d;
+    background-color: var(--todo_p);
   }
   input[type="radio"][id="inprogress"]{
-    background-color: #77c9ff;
+    background-color: var(--inprog_p);
   }
   input[type="radio"][id="todo"]{
-    background-color: #89ffba;
+    background-color: var(--done_p);
   }
   input[type="radio"][id="NC"]{
-    background-color: #bebebe;
+    background-color: var(--nc_p);
     margin-left: 15px;
   }
 
   /* Legend: Light color for priting */
   .square#NC{
-    background-color: #bebebe;
+    background-color: var(--nc_p);
   }
   .square#done{
-    background-color: #89ffba;
+    background-color: var(--done_p);
   }
   .square#inprogress{
-    background-color: #77c9ff;
+    background-color: var(--inprog_p);
   }
   .square#todo{
-    background-color: #ffe26d;
+    background-color: var(--todo_p);
   }
 }
