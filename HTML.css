@@ -38,11 +38,7 @@
 
 }
 
-.divTitle-other{
-  border: solid #bebebe;
-  background-color: #bebebe;
-  margin-top: 15px;
-}
+
 
 .divTitle-question{
   border: solid #66c2a5;
@@ -57,6 +53,12 @@
 .divTitle-algo{
   border: solid #8da0cb;
   background-color: #8da0cb;
+}
+
+.divTitle-other{
+  border: solid #bebebe;
+  background-color: #bebebe;
+  margin-top: 15px;
 }
 
 /* List + form "new item" button shape */
@@ -81,6 +83,12 @@
 .bigDiv-algo{
   border-top: solid #8da0cb;
 }
+
+.bigDiv-other{
+  border-top: solid #bebebe;
+}
+
+
 
 
 
