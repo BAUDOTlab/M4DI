@@ -393,7 +393,9 @@ PRINTING
     display: none;
   }
 
+  
   /* Light color for priting */
+  /*
   input[type="radio"][id="done"]{
     background-color: var(--todo_p);
   }
@@ -407,8 +409,10 @@ PRINTING
     background-color: var(--nc_p);
     margin-left: 15px;
   }
+    */
 
   /* Legend: Light color for priting */
+  /*
   .square#NC{
     background-color: var(--nc_p);
   }
@@ -421,6 +425,7 @@ PRINTING
   .square#todo{
     background-color: var(--todo_p);
   }
+    */
 }
 
 /* B' palette: light fills for printing, saturated when selected on screen */
