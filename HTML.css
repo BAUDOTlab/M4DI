@@ -416,3 +416,11 @@ li.permanent input#todo:checked       { background-color: #E69F00 !important; }
 li.permanent input#inprogress:checked { background-color: #56B4E9 !important; }
 li.permanent input#done:checked       { background-color: #009E73 !important; }
 li.permanent input#NC:checked         { background-color: #8A8984 !important; }
+
+.divTitle-protocol { margin-bottom: 15px; }
+
+.legendDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
