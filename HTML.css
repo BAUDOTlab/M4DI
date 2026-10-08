@@ -8,10 +8,21 @@ GLOBAL VARIABLES
 :root{
 
   /* Box color */
-  --todo: #f1c40f;
-  --inprog: #3498db;
-  --done: #2ecc71;
-  --nc: #808080;
+  --todo_bg: #f1c40f;
+  --todo_bd: #D9A63A;
+  --todo: #E69F00;
+
+  --inprog_bg: #CDE9F8;
+  --inprog_bd: #6FB7DE;
+  --inprog: #56B4E9;
+
+  --done_bg: #B9E3D2;
+  --done_bd: #3FA582;
+  --done: #009E73;
+
+  --nc_bg: #EDEDEB; 
+  --nc_bd: #B5B4AF;
+  --nc: #8A8984;
 
     
   /* Box color - print */
@@ -34,7 +45,6 @@ TITLES FORMAT
 */
 h1, h2, h3{
   text-align: center;
-
 }
 
 .divTitle{
@@ -42,7 +52,7 @@ h1, h2, h3{
   font-weight: bold;
   font-size: x-large;
   border-radius: 10px;
-  margin: 0px 15px 0px 15px;
+  margin: 15px 15px 0px 15px;
   color: white;
 }
 
@@ -64,7 +74,6 @@ h1, h2, h3{
 .divTitle-other{
   border: solid var(--other);
   background-color: var(--other);
-  margin-top: 15px;
 }
 
 /* 
@@ -180,43 +189,49 @@ LEGEND OF RADIO BUTTONS
   height: 1em;
   width: 1em;
   border-radius: 20%;
-  border: 0.1em solid currentColor;
+  border: 1px solid;
 }
 
 /* Square color according their id */
 .square#NC{
-  background-color: var(--nc);
+  background-color: var(--nc_bg);
+  border-color: var(--nc_bd);
 }
 .square#done{
-  background-color: var(--todo);
+  background-color: var(--done_bg);
+  border-color: var(--done_bd);
 }
 .square#inprogress{
-  background-color: var(--inprog);
+  background-color: var(--inprog_bg);
+  border-color: var(--inprog_bd);
 }
 .square#todo{
-  background-color: var(--done);
+  background-color: var(--todo_bg);
+  border-color: var(--todo_bd);
 }
 
 /* Div of the legend */
 .legendDiv{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  margin: -20px 15px -30px 15px;
 }
 
 /* Put legend list into the right */
 .legendUl{
-  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
 /* Legend list */
 li.legend{
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  margin: -30px 0px;
+  gap: 5px;
 }
-
 
 /*
 RADIO BUTTONS
@@ -229,12 +244,14 @@ input[type="radio"]{
   width: 1em; /*1.3em*/
   height: 1em;
   border-radius: 20%;
-  border: 0.13em solid currentColor;
+  border: 1px solid;
   cursor: pointer;
   margin: 0px 5px 0px 0px;
   background-repeat: no-repeat;
   display: grid;
   place-content: center;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 }
 
 /* Before check radio button */
@@ -252,18 +269,38 @@ input[type="radio"]:checked:before{
 
 /* Color of radio buttons according their meaning */
 input[type="radio"][id="done"]{
-  background-color: #f1c40f;
+  background-color: var(--todo_bg);
+  border-color: var(--todo_bd);
 }
 input[type="radio"][id="inprogress"]{
-  background-color: #3498db;
+  background-color: var(--inprog_bg);
+  border-color: var(--inprog_bd);
 }
 input[type="radio"][id="todo"]{
-  background-color: #2ecc71;
+  background-color: var(--done_bg);
+  border-color: var(--done_bd);
 }
 input[type="radio"][id="NC"]{
-  background-color: #808080;
+  background-color: var(--nc_bg);
+  border-color: var(--nc_bd);
   margin-left: 15px;
 }
+
+/*
+input[type="radio"][id="done"]:checked{
+  background-color: var(--todo);
+}
+input[type="radio"][id="inprogress"]:checked{
+  background-color: var(--inprog);
+}
+input[type="radio"][id="todo"]:checked{
+  background-color: var(--done);
+}
+input[type="radio"][id="NC"]:checked{
+  background-color: var(--nc);
+}
+*/
+
 
 /* When "in progress" radio button is checked */
 input[type="radio"][id="inprogress"]:checked~input[type="radio"][id="done"]{
@@ -280,15 +317,18 @@ input[type="radio"][id="todo"]:checked~input[type="radio"][id="done"]{
 
 /* When "not-concerned" radio button is checked */
 input[type="radio"][id="NC"]:checked~input[type="radio"][id="todo"]{
-  background-color: #808080;
+  background-color: var(--nc_bg);
+  border-color: var(--nc_bd);
   opacity: 0.5;
 }
 input[type="radio"][id="NC"]:checked~input[type="radio"][id="inprogress"]{
-  background-color: #808080;
+  background-color: var(--nc_bg);
+  border-color: var(--nc_bd);
   opacity: 0.5;
 }
 input[type="radio"][id="NC"]:checked~input[type="radio"][id="done"]{
-  background-color: #808080;
+  background-color: var(--nc_bg);
+  border-color: var(--nc_bd);
   opacity: 0.5;
 }
 input[type="radio"][id="NC"]:checked~.itemLabel{
@@ -382,50 +422,35 @@ PRINTING
     background-color: var(--todo_p);
   }
 }
-/* Horizontal legend */
-.legendUl {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.legend {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.legend p { margin: 0; }
 
 /* B' palette: light fills for printing, saturated when selected on screen */
+/*
 .square, li.permanent input[type="radio"] {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   border: 1px solid;
-  border-radius: 2px;
 }
+
 #todo       { background-color: #F8DFA8 !important; border-color: #D9A63A !important; }
 #inprogress { background-color: #CDE9F8 !important; border-color: #6FB7DE !important; }
 #done       { background-color: #B9E3D2 !important; border-color: #3FA582 !important; }
 #NC         { background-color: #EDEDEB !important; border-color: #B5B4AF !important; }
+*/
 
 /* Selected status on screen */
+/*
 li.permanent input#todo:checked       { background-color: #E69F00 !important; }
 li.permanent input#inprogress:checked { background-color: #56B4E9 !important; }
 li.permanent input#done:checked       { background-color: #009E73 !important; }
 li.permanent input#NC:checked         { background-color: #8A8984 !important; }
+*/
 
-.divTitle-protocol { margin-bottom: 15px; }
 
-.legendDiv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 /* Box order: To do, In progress, Done, Not concerned */
+
+/*
 .bigDiv li {
   display: flex;
   align-items: center;
@@ -437,3 +462,4 @@ li.permanent input#NC:checked         { background-color: #8A8984 !important; }
 .bigDiv li input#done       { order: 3; }
 .bigDiv li input#NC         { order: 4; margin-left: 12px; }
 .bigDiv li > label:not(.itemLabel) { display: none; }
+*/
