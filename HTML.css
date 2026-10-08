@@ -382,3 +382,37 @@ PRINTING
     background-color: var(--todo_p);
   }
 }
+/* Horizontal legend */
+.legendUl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.legend p { margin: 0; }
+
+/* B' palette: light fills for printing, saturated when selected on screen */
+.square, li.permanent input[type="radio"] {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  border: 1px solid;
+  border-radius: 2px;
+}
+#todo       { background-color: #F8DFA8 !important; border-color: #D9A63A !important; }
+#inprogress { background-color: #CDE9F8 !important; border-color: #6FB7DE !important; }
+#done       { background-color: #B9E3D2 !important; border-color: #3FA582 !important; }
+#NC         { background-color: #EDEDEB !important; border-color: #B5B4AF !important; }
+
+/* Selected status on screen */
+li.permanent input#todo:checked       { background-color: #E69F00 !important; }
+li.permanent input#inprogress:checked { background-color: #56B4E9 !important; }
+li.permanent input#done:checked       { background-color: #009E73 !important; }
+li.permanent input#NC:checked         { background-color: #8A8984 !important; }
