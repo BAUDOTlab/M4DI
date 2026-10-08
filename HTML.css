@@ -424,3 +424,16 @@ li.permanent input#NC:checked         { background-color: #8A8984 !important; }
   justify-content: space-between;
   align-items: center;
 }
+
+/* Box order: To do, In progress, Done, Not concerned */
+.bigDiv li {
+  display: flex;
+  align-items: center;
+}
+.bigDiv li input[type="radio"] { float: none; }
+.bigDiv li .itemLabel { order: 0; flex: 1; }
+.bigDiv li input#todo       { order: 1; }
+.bigDiv li input#inprogress { order: 2; }
+.bigDiv li input#done       { order: 3; }
+.bigDiv li input#NC         { order: 4; margin-left: 12px; }
+.bigDiv li > label:not(.itemLabel) { display: none; }
