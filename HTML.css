@@ -7,36 +7,31 @@ GLOBAL VARIABLES
 */
 :root{
 
-  /* Box color */
+  /* todo box color */
   --todo_bg: #f1c40f;
   --todo_bd: #D9A63A;
   --todo: #E69F00;
 
+  /* inprogress box color */
   --inprog_bg: #CDE9F8;
   --inprog_bd: #6FB7DE;
   --inprog: #56B4E9;
 
+  /* done box color */
   --done_bg: #B9E3D2;
   --done_bd: #3FA582;
   --done: #009E73;
 
+  /* not concerned box color */
   --nc_bg: #EDEDEB; 
   --nc_bd: #B5B4AF;
   --nc: #8A8984;
-
-    
-  /* Box color - print */
-  --todo_p: #ffe26d;
-  --inprog_p: #77c9ff;
-  --done_p: #89ffba;
-  --nc_p: #bebebe;
 
   /* Section color */
   --question: #66c2a5;
   --data: #fc8d62;
   --algo: #8da0cb;
   --other: #bebebe;
-
 }
 
 /*
@@ -168,21 +163,84 @@ ul{
 /* Vertical space between list items */
 li{
   margin: 5px 0px;
+  display: flex;
+  align-items: center;
 }
 
 .itemLabel{
   display: inline-block;
-  max-width: 70%;
+  max-width: 100%;
   width: 70%;
   overflow: visible;
   word-break: break-word;
 }
+
+/* Box order: trash, to do, in progress, done, not concerned */
+.itemLabel       { order: 0; flex: 1; }
+.btn-icon-remove { order: 1; }
+input#todo       { order: 2; }
+input#inprogress { order: 3; }
+input#done       { order: 4; }
+input#NC         { order: 5; }
 
 
 /*
 LEGEND OF RADIO BUTTONS
 ----------------------------------------
 */
+
+/* Div of the legend */
+.legendDiv{
+  border: solid;
+  display: flex;
+  flex-direction: row;
+
+  height: fit-content;
+  justify-content: space-between;
+  align-items: top;
+  /*margin: -20px 15px -30px 15px;*/
+}
+
+.lengendList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:self-end;
+}
+
+/* Print button */
+#print-button{
+  width: fit-content;
+  height: fit-content;
+  order: 1;
+}
+
+.legendSquares{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  order: 2;
+}
+
+
+
+
+/* Check boxes legend */
+.legendUl{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: end;
+  gap: 16px;
+  order: 2;
+}
+
+/* Legend list */
+li.legend{
+  margin: 0;
+  gap: 5px;
+
+}
 
 /* Square shape */
 .square{
@@ -210,28 +268,9 @@ LEGEND OF RADIO BUTTONS
   border-color: var(--todo_bd);
 }
 
-/* Div of the legend */
-.legendDiv{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: -20px 15px -30px 15px;
-}
 
-/* Put legend list into the right */
-.legendUl{
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
 
-/* Legend list */
-li.legend{
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
+
 
 /*
 RADIO BUTTONS
@@ -268,7 +307,7 @@ input[type="radio"]:checked:before{
 }
 
 /* Color of radio buttons according their meaning */
-input[type="radio"][id="done"]{
+input[type="radio"][id="todo"]{
   background-color: var(--todo_bg);
   border-color: var(--todo_bd);
 }
@@ -276,7 +315,7 @@ input[type="radio"][id="inprogress"]{
   background-color: var(--inprog_bg);
   border-color: var(--inprog_bd);
 }
-input[type="radio"][id="todo"]{
+input[type="radio"][id="done"]{
   background-color: var(--done_bg);
   border-color: var(--done_bd);
 }
@@ -286,14 +325,15 @@ input[type="radio"][id="NC"]{
   margin-left: 15px;
 }
 
+/* Selected status on screen */
 /*
-input[type="radio"][id="done"]:checked{
+input[type="radio"][id="todo"]:checked{
   background-color: var(--todo);
 }
 input[type="radio"][id="inprogress"]:checked{
   background-color: var(--inprog);
 }
-input[type="radio"][id="todo"]:checked{
+input[type="radio"][id="done"]:checked{
   background-color: var(--done);
 }
 input[type="radio"][id="NC"]:checked{
@@ -303,15 +343,15 @@ input[type="radio"][id="NC"]:checked{
 
 
 /* When "in progress" radio button is checked */
-input[type="radio"][id="inprogress"]:checked~input[type="radio"][id="done"]{
+input[type="radio"][id="inprogress"]:checked~input[type="radio"][id="todo"]{
   opacity: 0.5;
 }
 
 /* When "done" radio button is checked */
-input[type="radio"][id="todo"]:checked~input[type="radio"][id="inprogress"]{
+input[type="radio"][id="done"]:checked~input[type="radio"][id="inprogress"]{
   opacity: 0.5;
 }
-input[type="radio"][id="todo"]:checked~input[type="radio"][id="done"]{
+input[type="radio"][id="done"]:checked~input[type="radio"][id="todo"]{
   opacity: 0.5;
 }
 
@@ -355,8 +395,8 @@ REMOVE BUTTONS
   border: none;
   margin: 0px 5px 0 0;
   display: grid;
+  font-size: 12px;
 }
-
 
 /*
 PRINTING
@@ -393,78 +433,4 @@ PRINTING
     display: none;
   }
 
-  
-  /* Light color for priting */
-  /*
-  input[type="radio"][id="done"]{
-    background-color: var(--todo_p);
-  }
-  input[type="radio"][id="inprogress"]{
-    background-color: var(--inprog_p);
-  }
-  input[type="radio"][id="todo"]{
-    background-color: var(--done_p);
-  }
-  input[type="radio"][id="NC"]{
-    background-color: var(--nc_p);
-    margin-left: 15px;
-  }
-    */
-
-  /* Legend: Light color for priting */
-  /*
-  .square#NC{
-    background-color: var(--nc_p);
-  }
-  .square#done{
-    background-color: var(--done_p);
-  }
-  .square#inprogress{
-    background-color: var(--inprog_p);
-  }
-  .square#todo{
-    background-color: var(--todo_p);
-  }
-    */
 }
-
-/* B' palette: light fills for printing, saturated when selected on screen */
-/*
-.square, li.permanent input[type="radio"] {
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-  border: 1px solid;
-}
-
-#todo       { background-color: #F8DFA8 !important; border-color: #D9A63A !important; }
-#inprogress { background-color: #CDE9F8 !important; border-color: #6FB7DE !important; }
-#done       { background-color: #B9E3D2 !important; border-color: #3FA582 !important; }
-#NC         { background-color: #EDEDEB !important; border-color: #B5B4AF !important; }
-*/
-
-/* Selected status on screen */
-/*
-li.permanent input#todo:checked       { background-color: #E69F00 !important; }
-li.permanent input#inprogress:checked { background-color: #56B4E9 !important; }
-li.permanent input#done:checked       { background-color: #009E73 !important; }
-li.permanent input#NC:checked         { background-color: #8A8984 !important; }
-*/
-
-
-
-
-/* Box order: To do, In progress, Done, Not concerned */
-
-/*
-.bigDiv li {
-  display: flex;
-  align-items: center;
-}
-.bigDiv li input[type="radio"] { float: none; }
-.bigDiv li .itemLabel { order: 0; flex: 1; }
-.bigDiv li input#todo       { order: 1; }
-.bigDiv li input#inprogress { order: 2; }
-.bigDiv li input#done       { order: 3; }
-.bigDiv li input#NC         { order: 4; margin-left: 12px; }
-.bigDiv li > label:not(.itemLabel) { display: none; }
-*/
