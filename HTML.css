@@ -84,8 +84,8 @@ DIV FORMAT
 .mainDiv{
   /*border: solid;*/
   border-radius: 10px;
-  margin: 0px 15px 0px 15px;
-  padding: 1px 10px 10px 0;
+  /*margin: 0px 15px 0px 15px;*/
+  /*padding: 1px 10px 10px 0;*/
   /*box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);*/
 }
 
@@ -94,24 +94,22 @@ DIV FORMAT
   display: flex;
   flex-direction: row;
   justify-content:space-evenly;
+  margin: 0px 15px 0px 15px;
 }
 
 /* Each individual div of part 1 */
 .HRDiv, .CRDiv, .GPDiv {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 /* Each individual div of part 2 */
 .questionDiv, .dataDiv, .algoDiv {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 /* Each individual div of part 3 */
 .valDiv, .metricsDiv, .multiEvalDiv, .reprodDiv {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 /* List + form "new item" button shape */
