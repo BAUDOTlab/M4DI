@@ -189,23 +189,14 @@ LEGEND OF RADIO BUTTONS
 ----------------------------------------
 */
 
-/* Div of the legend */
+/* Legend div */
 .legendDiv{
-  border: solid;
   display: flex;
   flex-direction: row;
-
-  height: fit-content;
+  align-items: center;
   justify-content: space-between;
-  align-items: top;
-  /*margin: -20px 15px -30px 15px;*/
-}
-
-.lengendList{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items:self-end;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /* Print button */
@@ -215,31 +206,22 @@ LEGEND OF RADIO BUTTONS
   order: 1;
 }
 
-.legendSquares{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  order: 2;
-}
-
-
-
-
 /* Check boxes legend */
 .legendUl{
   display: flex;
   flex-direction: row;
-  height: fit-content;
-  align-items: end;
-  gap: 16px;
+  align-items: center;
+  gap: 15px;
+  height: 0px;
+  width: fit-content;
   order: 2;
 }
 
-/* Legend list */
-li.legend{
-  margin: 0;
+.legendList{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 5px;
-
 }
 
 /* Square shape */
@@ -267,9 +249,6 @@ li.legend{
   background-color: var(--todo_bg);
   border-color: var(--todo_bd);
 }
-
-
-
 
 
 /*
@@ -430,7 +409,8 @@ PRINTING
 
   /* Remove print button*/
   .btn#print-button{
-    display: none;
+    opacity: 0;
+    /*display: none;*/
   }
 
 }
