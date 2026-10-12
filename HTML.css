@@ -1,6 +1,5 @@
 /* TEST */
 
-
 /*
 GLOBAL VARIABLES
 ----------------------------------------------------
@@ -204,6 +203,13 @@ LEGEND OF RADIO BUTTONS
   order: 1;
 }
 
+/* Refresh button */
+#refresh-button{
+  width: fit-content;
+  height: fit-content;
+  order: 2;
+}
+
 /* Check boxes legend */
 .legendUl{
   display: flex;
@@ -212,7 +218,7 @@ LEGEND OF RADIO BUTTONS
   gap: 15px;
   height: 0px;
   width: fit-content;
-  order: 2;
+  order: 3;
 }
 
 .legendList{
@@ -387,12 +393,12 @@ PRINTING
   */
   * {
       print-color-adjust: exact!important;
-      page-break-inside: avoid;
+      /*page-break-inside: avoid;*/
   }
 
   /* Landscape printing*/
   @page{
-    size: landscape;
+    size: A4 landscape;
   }
   
   /* Remove remove button */
@@ -409,6 +415,9 @@ PRINTING
   .btn#print-button{
     opacity: 0;
     /*display: none;*/
+  }
+  .btn#refresh-button{
+    opacity: 0;
   }
 
 }

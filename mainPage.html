@@ -13,6 +13,14 @@
 
 <body>
 
+	<script>
+		window.addEventListener("load", function(){
+			document.querySelector('input[type="radio"]').forEach(function(radio){
+				radio.checked = false;
+			});
+		});
+	</script>
+
 	<header>
 		<h1>Multimodal data integration study</h1>
 	</header>
@@ -22,7 +30,10 @@
 	---------------------------------------->
 
 	<div class="legendDiv">
-		<button id="print-button" class="btn"><i class="fas fa-print"></i> Print page</button>
+		<div>
+			<button id="print-button" class="btn"><i class="fas fa-print"></i> Print page</button>
+			<button id="refresh-button" class="btn"><i class="fas fa-arrows-rotate"></i> Refresh page</button>
+		</div>
 		<ul class="legendUl">
 			<li class="legendList">
 				<p class="square" id="todo"></p>
@@ -76,7 +87,7 @@
 									<i class="fa-solid fa-trash-can"></i>-->
 
 									<!--------- Radio btn -->
-									<input type="radio" id="NC" name="radioItem00">
+									<input type="radio" id="NC" name="radioItem00" autocomplete="off">
 									<label for="NC"></label>
 									<input type="radio" id="done" name="radioItem00">
 									<label for="0"></label>
